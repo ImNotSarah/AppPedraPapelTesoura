@@ -1,6 +1,7 @@
 package com.example.apppedrapapeltesoura;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,21 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void selecionarPedra(View view ){
+        verificarGanhador("pedra");
+    }
+
+    public void selecionarPapel(View view ){
+        verificarGanhador("papel");
+    }
+
+    public void selecionarTesoura(View view ){
+        verificarGanhador("tesoura");
+    }
+
+    private void verificarGanhador(String escolhaUsuario){
+        System.out.println("Item clicado: " + escolhaUsuario);
     }
 }
