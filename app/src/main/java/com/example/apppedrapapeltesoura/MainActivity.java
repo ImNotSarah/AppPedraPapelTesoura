@@ -3,6 +3,7 @@ package com.example.apppedrapapeltesoura;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,6 +63,23 @@ public class MainActivity extends AppCompatActivity {
     private void verificarGanhador(String escolhaUsuario){
 
         String escolhaApp = gerarEscolhaAleatoriaApp();
+        TextView textoResultado = findViewById(R.id.text_resutado);
+
+        if(
+                (escolhaApp == "pedra" && escolhaUsuario == "tesoura") ||
+                (escolhaApp == "papel" && escolhaUsuario == "pedroa") ||
+                (escolhaApp == "tesoura" && escolhaUsuario == "papel")
+        ){
+            textoResultado.setText("Você perdeu ;-;");
+        }else if(
+                (escolhaUsuario == "pedra" && escolhaApp == "tesoura") ||
+                (escolhaUsuario == "papel" && escolhaApp == "pedroa") ||
+                (escolhaUsuario == "tesoura" && escolhaApp == "papel")
+        ){
+            textoResultado.setText("Você ganhou! =D");
+        }else{
+            textoResultado.setText("Empatamos '-'");
+        }
         //System.out.println("Item clicado: " + escolhaUsuario);
     }
 
