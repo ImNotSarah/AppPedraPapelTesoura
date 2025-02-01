@@ -67,13 +67,13 @@ public class MainActivity extends AppCompatActivity {
 
         if(
                 (escolhaApp == "pedra" && escolhaUsuario == "tesoura") ||
-                (escolhaApp == "papel" && escolhaUsuario == "pedroa") ||
+                (escolhaApp == "papel" && escolhaUsuario == "pedra") ||
                 (escolhaApp == "tesoura" && escolhaUsuario == "papel")
         ){
             textoResultado.setText("Você perdeu ;-;");
         }else if(
                 (escolhaUsuario == "pedra" && escolhaApp == "tesoura") ||
-                (escolhaUsuario == "papel" && escolhaApp == "pedroa") ||
+                (escolhaUsuario == "papel" && escolhaApp == "pedra") ||
                 (escolhaUsuario == "tesoura" && escolhaApp == "papel")
         ){
             textoResultado.setText("Você ganhou! =D");
